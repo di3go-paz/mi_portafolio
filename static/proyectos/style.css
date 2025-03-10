@@ -1,0 +1,8 @@
+body {
+    background: rgb(86,17,57);
+    background: linear-gradient(90deg, rgba(86,17,57,1) 0%, rgba(9,9,121,1) 50%, rgba(56,162,215,0.2778) 100%);
+    color: white; /* Para mejorar la legibilidad del texto */
+    min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+    margin: 0;
+    padding: 0;
+}

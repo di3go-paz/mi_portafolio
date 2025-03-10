@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Mis Proyectos</h1>
+    <div class="row">
+        {% for proyecto in proyectos %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    {% if proyecto.imagen %}
+                        <img src="{{ proyecto.imagen.url }}" class="card-img-top" alt="{{ proyecto.titulo }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ proyecto.titulo }}</h5>
+                        <p class="card-text">{{ proyecto.descripcion }}</p>
+                        {% if proyecto.enlace %}
+                            <a href="{{ proyecto.enlace }}" class="btn btn-primary" target="_blank">Ver proyecto</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
